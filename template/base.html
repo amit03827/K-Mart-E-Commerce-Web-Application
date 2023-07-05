@@ -58,7 +58,7 @@
                            <ul>
                               {% if request.user.is_authenticated %}
                                  <li>
-                                     <a href="#">Profile</a>
+                                     <a href="{% url 'ProfileView' %}">Profile</a>
                                  </li>
                                  <li class="ml-5">
                                      <a href="{% url 'logout_view' %}">Logout</a>
@@ -149,7 +149,7 @@
                         <div class="right_cart_section">
                            <ul class="cart_icons">
                               <li><a href="shop-cart.html"><i class="fa fa-heart-o"></i> 0</a></li>
-                              <li><a href=""><i class="fa fa-shopping-bag"></i>{{ global_cart_quantity }}</a></li>
+                              <li><a href="{% url 'my_cart_view' %}"><i class="fa fa-shopping-bag"></i>{{ global_cart_quantity }}</a></li>
                            </ul>
                         </div>
                      </div>
